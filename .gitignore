@@ -46,11 +46,13 @@ $RECYCLE.BIN/
 *.swo
 *~
 
+
 # =========================
-# Temporary / backup files
-# =========================
-*.tmp
-*.temp
-*.bak
-*.backup
-*.log
+# Hugo
+=========================
+# Hugo generated files
+/public/
+/resources/_gen/
+
+# Hugo modules
+.hugo_build.lock
