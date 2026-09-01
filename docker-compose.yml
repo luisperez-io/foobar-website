@@ -1,0 +1,28 @@
+services:
+  website:
+    build: .
+    container_name: foobario.net-website
+    restart: unless-stopped
+
+    networks:
+      - proxy
+
+    labels:
+      - "traefik.enable=true"
+
+      # Router
+      - "traefik.http.routers.website.rule=Host(`foobar-io.net`)"
+      - "traefik.http.routers.website.entrypoints=websecure"
+
+      # HTTPS
+      - "traefik.http.routers.website.tls=true"
+      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
+
+      # Nginx
+      - "traefik.http.services.website.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
+
+# No ports section since Traefik is the only container exposing ports 80/443.

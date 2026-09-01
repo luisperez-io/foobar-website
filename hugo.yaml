@@ -1,0 +1,60 @@
+baseURL: "https://foobar-io.net/"
+languageCode: "en-us"
+title: "FooBar-io"
+
+theme:
+  - github.com/adityatelange/hugo-PaperMod
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+params:
+
+  env: production
+
+  description: "FooBar-io"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+  hideMeta: true
+
+  homeInfoParams:
+    Title: "Welcome to FooBar-io"
+    Content: >
+      This is an awesome website by Luis.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/"
+
+menu:
+
+  main:
+
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 40
