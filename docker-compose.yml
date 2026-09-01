@@ -1,7 +1,7 @@
 services:
   website:
     build: .
-    container_name: foobario.net-website
+    container_name: foobar-website
     restart: unless-stopped
 
     networks:
