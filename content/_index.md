@@ -6,7 +6,7 @@ title: "FooBar-io"
 
 Welcome to **foobar-io.net**.
 
-Luis Pérez portfolio website. Also a place to discuss why Gigi is fat.
+Luis Pérez portfolio website.
 
 ## Explore
 
